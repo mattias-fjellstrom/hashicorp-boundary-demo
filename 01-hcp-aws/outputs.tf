@@ -1,9 +1,9 @@
-output "hcp_boundary_cluster_url" {
+output "boundary_cluster_url" {
   description = "HCP Boundary cluster URL"
   value       = hcp_boundary_cluster.this.cluster_url
 }
 
-output "hcp_vault_cluster_public_url" {
+output "vault_cluster_url" {
   description = "HCP Vault public endpoint URL"
   value       = hcp_vault_cluster.this.vault_public_endpoint_url
 }

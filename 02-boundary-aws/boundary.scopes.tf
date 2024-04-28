@@ -1,5 +1,5 @@
 resource "boundary_scope" "org" {
-  name                     = "demo-organization"
+  name                     = "cloud"
   description              = "Organization for blog post demo"
   scope_id                 = "global"
   auto_create_admin_role   = true

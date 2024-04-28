@@ -1,18 +1,16 @@
 resource "boundary_role" "reader" {
   name        = "reader"
   description = "Custom reader role for on-call engineers"
-  scope_id    = boundary_scope.org.id
+  scope_id    = "global"
   grant_scope_ids = [
     boundary_scope.org.id,
     boundary_scope.project.id,
   ]
   grant_strings = [
     "ids=*;type=*;actions=list,no-op",
-    "ids=*;type=auth-token;actions=list,read:self,delete:self"
   ]
   principal_ids = [
-    boundary_user.jane.id,
-    boundary_user.john.id,
+    boundary_group.oncall.id,
   ]
 }
 

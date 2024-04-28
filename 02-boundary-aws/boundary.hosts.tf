@@ -1,4 +1,3 @@
-
 resource "boundary_host_catalog_static" "ec2" {
   name        = "AWS Static Host Catalog"
   description = "EC2 instances"

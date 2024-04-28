@@ -103,8 +103,4 @@ resource "aws_instance" "ec2" {
   tags = {
     Name = "Boundary Target"
   }
-
-  lifecycle {
-    ignore_changes = [user_data_base64]
-  }
 }
